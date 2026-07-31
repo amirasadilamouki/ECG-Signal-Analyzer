@@ -7,6 +7,7 @@ An introductory ECG signal processing project developed for learning, practice, 
 - Add Gaussian noise to simulate a noisy acquisition
 - Apply basic low-pass filtering (Butterworth) using SciPy
 - Visualize clean vs noisy vs filtered signals
+- Detect R-peaks and estimate heart rate in BPM
 
 ## Project Structure
 - `src/`: source code
@@ -27,6 +28,7 @@ The script saves an output figure to `Images/Figure_1.png`.
 
 ## Sample Output
 ![Synthetic ECG Output](Images/Figure_1.png)
+![R-peak Detection](Images/Figure_2.png)
 
 ## Project Context
 Developed for academic practice in Biomedical Signal Processing (2023).
