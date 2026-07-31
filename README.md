@@ -25,3 +25,6 @@ python src/ecg_processor.py
 
 ## Sample Output
 ![Synthetic ECG Output](Images/Figure_1.png)
+
+## Project Context
+Developed for academic practice in Biomedical Signal Processing (2023).
