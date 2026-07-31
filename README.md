@@ -3,9 +3,10 @@
 An introductory ECG signal processing project developed for learning, practice, and academic coursework.
 
 ## Features
-- Generate a synthetic ECG-like signal
-- Basic visualization of the signal
-- Clear and simple Python code structure
+- Generate a synthetic ECG-like signal (simple P-Q-R-S-T morphology)
+- Add Gaussian noise to simulate a noisy acquisition
+- Apply basic low-pass filtering (Butterworth) using SciPy
+- Visualize clean vs noisy vs filtered signals
 
 ## Project Structure
 - `src/`: source code
@@ -22,6 +23,7 @@ Run the script:
 ```bash
 python src/ecg_processor.py
 ```
+The script saves an output figure to `Images/Figure_1.png`.
 
 ## Sample Output
 ![Synthetic ECG Output](Images/Figure_1.png)
