@@ -36,6 +36,7 @@ Run the main ECG processing script:
 ```bash
 python src/ecg_processor.py
 ```
+
 The script generates and saves the following outputs:
 
 - `Images/Figure_1.png` → clean vs noisy vs filtered ECG comparison
@@ -47,6 +48,7 @@ The script generates and saves the following outputs:
 
 ## Feature Extraction Output
 The current version of the project extracts the following ECG features:
+
 - R-peak time positions
 - R-peak amplitudes
 - RR intervals
@@ -56,7 +58,6 @@ The current version of the project extracts the following ECG features:
 - Maximum RR interval
 
 These extracted values are saved in:
-
 `data/ecg_features.csv`
 
 ## HRV Analysis Output
@@ -65,8 +66,8 @@ The project also computes a simple time-domain HRV summary from detected R-peaks
 The HRV results include:
 - Mean RR
 - SDNN
-These values are saved in:
 
+These values are saved in:
 `data/hrv_results.csv`
 
 ## Sample Output
@@ -81,6 +82,34 @@ These values are saved in:
 
 ### Figure 4 - Basic Time-Domain HRV Analysis
 ![HRV Analysis](Images/Figure_4.png)
+
+## How to Reproduce
+1. Clone the repository:
+```bash
+git clone https://github.com/amirasadilamouki/ECG-Signal-Analyzer
+```
+
+2. Create and activate a virtual environment:
+```bash
+   python -m venv .venv
+   .\.venv\Scripts\activate  # For PowerShell
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the processor:
+```bash
+python src/ecg_processor.py
+```
+
+## Future Work
+
+- Implementation of frequency-domain HRV analysis (e.g., LF/HF ratio)
+- Integration of real-world ECG datasets (e.g., PhysioNet)
+- Advanced noise reduction techniques for non-stationary artifacts
 
 ## Project Context
 Developed for academic practice in Biomedical Signal Processing (2023).
