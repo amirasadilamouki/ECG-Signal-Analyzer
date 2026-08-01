@@ -15,7 +15,10 @@ An introductory ECG signal processing project developed for learning, practice, 
   - Standard deviation of RR intervals
   - Minimum RR interval
   - Maximum RR interval
-    
+- Perform basic time-domain HRV analysis:
+  - Mean RR
+  - SDNN (standard deviation of normal-to-normal intervals)
+
 ## Project Structure
 - `src/`: source code
 - `Images/`: output figures and results
@@ -28,6 +31,8 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+Run the main ECG processing script:
+
 ```bash
 python src/ecg_processor.py
 ```
@@ -36,7 +41,9 @@ The script generates and saves the following outputs:
 - `Images/Figure_1.png` → clean vs noisy vs filtered ECG comparison
 - `Images/Figure_2.png` → detected R-peaks and estimated heart rate
 - `Images/Figure_3.png` → RR interval analysis and R-peak amplitudes
+- `Images/Figure_4.png` → basic time-domain HRV analysis
 - `data/ecg_features.csv` → extracted ECG feature values
+- `data/hrv_results.csv` → HRV summary results
 
 ## Feature Extraction Output
 The current version of the project extracts the following ECG features:
@@ -49,20 +56,31 @@ The current version of the project extracts the following ECG features:
 - Maximum RR interval
 
 These extracted values are saved in:
-data/ecg_features.csv
 
+`data/ecg_features.csv`
 
+## HRV Analysis Output
+The project also computes a simple time-domain HRV summary from detected R-peaks.
 
+The HRV results include:
+- Mean RR
+- SDNN
+These values are saved in:
+
+`data/hrv_results.csv`
 
 ## Sample Output
-## Figure 1 - Signal Comparison
+### Figure 1 - Signal Comparison
 ![Synthetic ECG Output](Images/Figure_1.png)
 
-## Figure 2 - R-peak Detection
+### Figure 2 - R-peak Detection
 ![R-peak Detection](Images/Figure_2.png)
 
-## Figure 3 - Feature Extraction
+### Figure 3 - Feature Extraction
 ![Feature Extraction](Images/Figure_3.png)
+
+### Figure 4 - Basic Time-Domain HRV Analysis
+![HRV Analysis](Images/Figure_4.png)
 
 ## Project Context
 Developed for academic practice in Biomedical Signal Processing (2023).
